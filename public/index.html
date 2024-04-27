@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner and Generator</title>
+    <!-- Adding styles directly here for simplicity -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        #video {
+            width: 100%; /* Responsive video width */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        #qrCode {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        div {
+            margin-top: 10px;
+        }
+    </style>
+    <!-- External JS Libraries for QR Code Generation and Scanning -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- React's root element -->
+    <script src="%PUBLIC_URL%/build/static/js/bundle.js"></script>
+    <!-- Including React bundle, React DOM and the app logic -->
+</body>
+</html>
