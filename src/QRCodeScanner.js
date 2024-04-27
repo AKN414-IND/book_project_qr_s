@@ -6,7 +6,7 @@ const QRCodeScanner = () => {
     const videoRef = useRef(null);
     const [isScanning, setIsScanning] = useState(false);
 
-    useEffect(() => {
+    useEffect(() =>{
         const scanQRCode = () => {
             const canvas = document.createElement('canvas');
             const video = videoRef.current;
@@ -41,8 +41,7 @@ const QRCodeScanner = () => {
             };
 
             checkQRCode();
-        };
-
+        }
         const startVideo = async () => {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
@@ -64,7 +63,7 @@ const QRCodeScanner = () => {
         };
 
         startVideo();
-    }, []); // Removed scanQRCode from dependencies as it's defined inside useEffect
+    }, [isScanning]);
 
     const callServiceEndpoint = (url) => {
         fetch(url)
