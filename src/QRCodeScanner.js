@@ -66,6 +66,12 @@ const QRCodeScanner = () => {
 
         checkQRCode();
     };
+    useEffect(() => {
+        return () => {
+            setIsScanning(true);
+        };
+    }
+    , [scanQRCode]);
 
     const callServiceEndpoint = (url) => {
         fetch(url)  
